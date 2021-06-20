@@ -19,23 +19,27 @@ function RightMenu(props) {
     });
   };
 
+//로그인 안한 사람들은 이 메뉴가 렌더링됨.
   if (user.userData && !user.userData.isAuth) {
     return (
       <Menu mode={props.mode}>
-        <Menu.Item key="mail">
-          <a href="/login">Signin</a>
-        </Menu.Item>
-        <Menu.Item key="app">
-          <a href="/register">Signup</a>
-        </Menu.Item>
+          <Menu.Item key="mail">
+              <a href="/login">Signin</a>
+          </Menu.Item>
+          <Menu.Item key="app">
+              <a href="/register">Signup</a>
+          </Menu.Item>
       </Menu>
     )
-  } else {
+  } else { //요건 로그인한 사람용.
     return (
       <Menu mode={props.mode}>
-        <Menu.Item key="logout">
-          <a onClick={logoutHandler}>Logout</a>
-        </Menu.Item>
+          <Menu.Item key="upload">
+              <a href="/video/upload">Video</a>
+          </Menu.Item>
+          <Menu.Item key="logout">
+              <a onClick={logoutHandler}>Logout</a>
+          </Menu.Item>
       </Menu>
     )
   }
