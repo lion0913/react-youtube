@@ -12,6 +12,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
+  </component>
   <component name="ProjectId" id="1uByFQIGcYsKPBF2vlUjYJ1VLyX" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -25,6 +28,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -41,7 +45,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1624153172319</updated>
-      <workItem from="1624153173905" duration="2109000" />
+      <workItem from="1624153173905" duration="2869000" />
     </task>
     <servers />
   </component>
@@ -49,9 +53,33 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="542" y="253" width="596" height="522" key="find.popup" timestamp="1624161986487">
+    <state width="1638" height="261" key="GridCell.Tab.0.bottom" timestamp="1624163918832">
       <screen x="0" y="23" width="1680" height="983" />
     </state>
-    <state x="542" y="253" width="596" height="522" key="find.popup/0.23.1680.983@0.23.1680.983" timestamp="1624161986487" />
+    <state width="1638" height="261" key="GridCell.Tab.0.bottom/0.23.1680.983@0.23.1680.983" timestamp="1624163918832" />
+    <state width="1638" height="261" key="GridCell.Tab.0.center" timestamp="1624163918831">
+      <screen x="0" y="23" width="1680" height="983" />
+    </state>
+    <state width="1638" height="261" key="GridCell.Tab.0.center/0.23.1680.983@0.23.1680.983" timestamp="1624163918831" />
+    <state width="1638" height="261" key="GridCell.Tab.0.left" timestamp="1624163918831">
+      <screen x="0" y="23" width="1680" height="983" />
+    </state>
+    <state width="1638" height="261" key="GridCell.Tab.0.left/0.23.1680.983@0.23.1680.983" timestamp="1624163918831" />
+    <state width="1638" height="261" key="GridCell.Tab.0.right" timestamp="1624163918832">
+      <screen x="0" y="23" width="1680" height="983" />
+    </state>
+    <state width="1638" height="261" key="GridCell.Tab.0.right/0.23.1680.983@0.23.1680.983" timestamp="1624163918832" />
+    <state x="0" y="153" key="SettingsEditor" timestamp="1624164223120">
+      <screen x="0" y="23" width="1680" height="983" />
+    </state>
+    <state x="0" y="153" key="SettingsEditor/0.23.1680.983@0.23.1680.983" timestamp="1624164223120" />
+    <state x="542" y="253" width="596" height="522" key="find.popup" timestamp="1624164353292">
+      <screen x="0" y="23" width="1680" height="983" />
+    </state>
+    <state x="542" y="253" width="596" height="522" key="find.popup/0.23.1680.983@0.23.1680.983" timestamp="1624164353292" />
+    <state x="114" y="239" width="670" height="676" key="search.everywhere.popup" timestamp="1624164239768">
+      <screen x="0" y="23" width="1680" height="983" />
+    </state>
+    <state x="114" y="239" width="670" height="676" key="search.everywhere.popup/0.23.1680.983@0.23.1680.983" timestamp="1624164239768" />
   </component>
 </project>
