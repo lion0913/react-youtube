@@ -73,13 +73,15 @@
       <screen x="0" y="23" width="1680" height="983" />
     </state>
     <state x="0" y="153" key="SettingsEditor/0.23.1680.983@0.23.1680.983" timestamp="1624164223120" />
-    <state x="542" y="253" width="596" height="522" key="find.popup" timestamp="1624164353292">
-      <screen x="0" y="23" width="1680" height="983" />
+    <state x="542" y="246" width="596" height="558" key="find.popup" timestamp="1624285102572">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state x="542" y="246" width="596" height="558" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1624285102572" />
     <state x="542" y="253" width="596" height="522" key="find.popup/0.23.1680.983@0.23.1680.983" timestamp="1624164353292" />
-    <state x="114" y="239" width="670" height="676" key="search.everywhere.popup" timestamp="1624164239768">
-      <screen x="0" y="23" width="1680" height="983" />
+    <state x="114" y="231" width="670" height="723" key="search.everywhere.popup" timestamp="1624284383428">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state x="114" y="231" width="670" height="723" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1624284383428" />
     <state x="114" y="239" width="670" height="676" key="search.everywhere.popup/0.23.1680.983@0.23.1680.983" timestamp="1624164239768" />
   </component>
 </project>
