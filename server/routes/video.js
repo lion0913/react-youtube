@@ -13,7 +13,7 @@ let storage = multer.diskStorage({
     },
     //파일 이름 선언
     filename : (req, file, cb) => {
-        cb(null, '${Date.now()}_${file.originalname}');
+        cb(null, `${Date.now()}_${file.originalname}`);
     },
     fileFilter : (req, file, cb) => {
         const ext = path.extname(file.originalname)
