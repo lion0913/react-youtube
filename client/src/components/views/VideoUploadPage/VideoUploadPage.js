@@ -68,6 +68,7 @@ function VideoUploadPage() {
                     Axios.post('/api/video/thumbnail', variable)
                         .then(response => {
                             if(response.data.success) {
+                                console.log(response.data)
 
                             } else {
                                 alert("비디오 생성에 실패했습니다.")

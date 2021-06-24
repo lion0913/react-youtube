@@ -47,14 +47,38 @@ router.post('/uploadfiles', (req,res) => {
 })
 
 router.post('/thumbnail', (req,res) => {
-    // 썸네일 생성하고 비디오 러닝타임 가져오기
-    ffmpeg(req.body.url)
+
+    let filePath =""
+    let fileDuration =""
+    // 비디오 정보 가져오기(러닝타임 등등)
+    ffmpeg.ffprobe(req.body.url, function(err, metadata) {
+        console.dir(metadata);
+        console.log(metadata.format.duration);
+        fileDuration = metadata.format.duration
+    });
+
+    // 썸네일 생성
+    ffmpeg(req.body.url) //클라이언트에서 온 비디오 url 경로
         .on('filenames',  function(filenames) {
+            //비디오 썸네일 파일이름 생성
             console.log('Will generate '+filenames.join(', '))
+            console.log(filenames)
             filePath ="uploads/thumbnails/"+filenames[0]
         })
         .on('end', function(){
-            return res.json({success:true})
+            //생성완료 후 상황
+            return res.json({success : true, url : filePath, fileName : filenames, fileDuration : fileDuration})
+        })
+        .on('error', function(err){
+            //에러가 났을 경우
+            console.error(err);
+            return res.json({success : false, err});
+        })
+        .screenshots({
+            count : 3, //3개의 썸네일 찍기 가능
+            folder : 'uploads/thumbnails', //썸네일 담을 위치
+            size : '320x240', //사이즈
+            filename : 'thumbnail-%b.png' //파일 이름(thumbnail-원래 이름)
         })
 
 
