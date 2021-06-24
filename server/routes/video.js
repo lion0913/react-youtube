@@ -4,8 +4,9 @@ const router = express.Router();
 
 const { auth } = require("../middleware/auth");
 const multer = require("multer");
+const ffmpeg = require("fluent-ffmpeg");
 
-
+//multer(동영상 저장 라이브러리) config파일
 let storage = multer.diskStorage({
     //파일 저장장소 지정
     destination : (req, file, cb) => {
@@ -42,6 +43,20 @@ router.post('/uploadfiles', (req,res) => {
             return res.json({success : true, url : res.req.file.path, fileName : res.req.file.filename})
         }
     })
+
+})
+
+router.post('/thumbnail', (req,res) => {
+    // 썸네일 생성하고 비디오 러닝타임 가져오기
+    ffmpeg(req.body.url)
+        .on('filenames',  function(filenames) {
+            console.log('Will generate '+filenames.join(', '))
+            filePath ="uploads/thumbnails/"+filenames[0]
+        })
+        .on('end', function(){
+            return res.json({success:true})
+        })
+
 
 })
 

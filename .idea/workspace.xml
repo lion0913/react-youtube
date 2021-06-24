@@ -19,7 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15a25985-cb60-4ea7-8c50-02c4caa9b35d" name="Default Changelist" comment="" />
+    <list default="true" id="15a25985-cb60-4ea7-8c50-02c4caa9b35d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/views/VideoUploadPage/VideoUploadPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/views/VideoUploadPage/VideoUploadPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/video.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/video.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,7 +76,7 @@
       <option name="presentableId" value="Default" />
       <updated>1624153172319</updated>
       <workItem from="1624153173905" duration="2869000" />
-      <workItem from="1624456806146" duration="971000" />
+      <workItem from="1624456806146" duration="1998000" />
     </task>
     <servers />
   </component>
@@ -89,6 +95,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="479" y="330" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1624457906522">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="479" y="330" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1624457906522" />
     <state width="1638" height="261" key="GridCell.Tab.0.bottom" timestamp="1624163918832">
       <screen x="0" y="23" width="1680" height="983" />
     </state>
@@ -114,10 +124,10 @@
     </state>
     <state x="542" y="246" width="596" height="558" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1624285102572" />
     <state x="542" y="253" width="596" height="522" key="find.popup/0.23.1680.983@0.23.1680.983" timestamp="1624164353292" />
-    <state x="114" y="231" width="670" height="723" key="search.everywhere.popup" timestamp="1624284383428">
+    <state x="114" y="231" width="670" height="723" key="search.everywhere.popup" timestamp="1624546417318">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="114" y="231" width="670" height="723" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1624284383428" />
+    <state x="114" y="231" width="670" height="723" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1624546417318" />
     <state x="114" y="239" width="670" height="676" key="search.everywhere.popup/0.23.1680.983@0.23.1680.983" timestamp="1624164239768" />
   </component>
 </project>

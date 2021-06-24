@@ -58,6 +58,21 @@ function VideoUploadPage() {
             .then(response => {
                 if(response.data.success) {
                     console.log(response.data)
+
+                    //동영상이 성공적으로 저장되면 썸네일 생성(ffmpeg 라이브러리 사용)
+                    let variable = {
+                        url : response.data.url,
+                        fileName : response.data.fileName
+                    }
+
+                    Axios.post('/api/video/thumbnail', variable)
+                        .then(response => {
+                            if(response.data.success) {
+
+                            } else {
+                                alert("비디오 생성에 실패했습니다.")
+                            }
+                        })
                 } else {
                     alert("비디오 업로드를 실패했습니다.")
                 }
