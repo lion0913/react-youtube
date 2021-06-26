@@ -67,7 +67,7 @@ router.post('/thumbnail', (req,res) => {
         })
         .on('end', function(){
             //생성완료 후 상황
-            return res.json({success : true, url : filePath, fileName : filenames, fileDuration : fileDuration})
+            return res.json({success : true, url : filePath, fileDuration : fileDuration});
         })
         .on('error', function(err){
             //에러가 났을 경우

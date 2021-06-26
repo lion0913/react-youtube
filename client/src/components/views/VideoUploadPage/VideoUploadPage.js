@@ -28,6 +28,9 @@ function VideoUploadPage() {
     const [Description, setDescription] = useState("")
     const [Private, setPrivate] = useState(0) //private : 0 , public : 1
     const [Category, setCategory] = useState("Film & Animation")
+    const [FilePath, setFilePath] = useState("")
+    const [Duration, setDuration] = useState("")
+    const [ThumbnailPath, setThumbnailPath] = useState("")
 
     const onTitleChange = (e) => {
         //e : 뭔가 이벤트가 발생했을때(한번 입력할때)의 변경된 state
@@ -65,10 +68,14 @@ function VideoUploadPage() {
                         fileName : response.data.fileName
                     }
 
+                    setFilePath(response.data.url)
+
                     Axios.post('/api/video/thumbnail', variable)
                         .then(response => {
                             if(response.data.success) {
                                 console.log(response.data)
+                                setDuration(response.data.fileDuration)
+                                setThumbnailPath(response.data.url)
 
                             } else {
                                 alert("비디오 생성에 실패했습니다.")
@@ -99,10 +106,11 @@ function VideoUploadPage() {
                                   </div>
                               }
                     </Dropzone>
-
-                    <div>
-                        <img src alt />
-                    </div>
+                    {ThumbnailPath &&//ThumbnailPath가 있을때만 렌더링됨.
+                        <div>
+                            <img src={`http://localhost:5000/${ThumbnailPath}`} alt="thumbnail" />
+                        </div>
+                    }
                 </div>
                 <br />
                 <br />
