@@ -23,7 +23,7 @@ const CategoryOptions = [
 
 
 //functional component 생성
-function VideoUploadPage() {
+function VideoUploadPage(props) {
     //state에 가서 user를 가져오는 작업(유저정보 불러와서 활용)
     const user = useSelector(state => state.user);
 
@@ -107,6 +107,13 @@ function VideoUploadPage() {
         Axios.post("/api/video/uploadVideo", variables)
             .then(response => {
                 if(response.data.success) {
+                    console.log(response.data)
+                    message.success('성공적으로 업로드하였습니다.')
+
+                    //3초 지연 후 시행
+                    setTimeout(()=> {
+                        props.history.push('/')
+                    },3000);
 
                 } else {
                     alert('비디오 업로드에 실패했습니다.')
