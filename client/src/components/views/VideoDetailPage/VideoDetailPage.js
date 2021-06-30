@@ -18,7 +18,7 @@ function VideoDetailPage(props) {
                     alert("비디오 정보를 가져오기에 실패했습니다.")
                 }
             })
-    })
+    },[])
 
     if(VideoDetail.writer) {
 
