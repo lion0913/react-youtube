@@ -20,8 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15a25985-cb60-4ea7-8c50-02c4caa9b35d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/components/views/VideoDetailPage/Sections/Subscribe.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/models/Subscriber.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/routes/subscribe.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/views/VideoDetailPage/Sections/SideVideo.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/views/VideoDetailPage/Sections/SideVideo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/views/VideoDetailPage/VideoDetailPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/views/VideoDetailPage/VideoDetailPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +79,7 @@
       <workItem from="1624153173905" duration="2869000" />
       <workItem from="1624456806146" duration="3354000" />
       <workItem from="1624632219698" duration="7393000" />
-      <workItem from="1624889281941" duration="4680000" />
+      <workItem from="1624889281941" duration="7912000" />
     </task>
     <servers />
   </component>

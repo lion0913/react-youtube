@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {Row, Col, List, Avatar} from 'antd';
 import Axios from 'axios';
 import SideVideo from "./Sections/SideVideo";
+import Subscribe from "./Sections/Subscribe";
 
 function VideoDetailPage(props) {
 
@@ -30,7 +31,8 @@ function VideoDetailPage(props) {
                         {/*메인 비디오 부분*/}
                         <video style={{width:'100%'}} src={`http://localhost:5000/${VideoDetail.filePath}`} controls />
                         <List.Item
-                            actions>
+                            // subscribe components에 writer의 아이디를 보내주는 방법
+                            actions={[<Subscribe userTo={VideoDetail.writer._id}/>]}>
                             <List.Item.Meta
                                 avatar={<Avatar src={VideoDetail.writer.image} />}
                                 title={VideoDetail.writer.name}
