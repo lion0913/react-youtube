@@ -32,7 +32,7 @@ function VideoDetailPage(props) {
                         <video style={{width:'100%'}} src={`http://localhost:5000/${VideoDetail.filePath}`} controls />
                         <List.Item
                             // subscribe components에 writer의 아이디를 보내주는 방법
-                            actions={[<Subscribe userTo={VideoDetail.writer._id}/>]}>
+                            actions={[<Subscribe userTo={VideoDetail.writer._id} userFrom={localStorage.getItem('userId')}/>]}>
                             <List.Item.Meta
                                 avatar={<Avatar src={VideoDetail.writer.image} />}
                                 title={VideoDetail.writer.name}
