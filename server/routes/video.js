@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { Video } = require("../models/Video");
+const { Subscriber } = require("../models/Subscriber");
 
 const { auth } = require("../middleware/auth");
 const multer = require("multer");
@@ -116,6 +117,33 @@ router.post('/getVideoDetail', (req,res) => {
             if(err) return res.status(400).send(err)
             return res.status(200).json({success : true, videoDetail})
         })
+})
+
+router.post('/getSubscriptionVideos', (req,res) => {
+    //자신의 아이디를 가지고 크리에이터들을 찾는다.
+    Subscriber.find({userFrom : req.body.userFrom})
+        .exec((err, subscriberInfo) => {
+            if(err) return res.status(400).send(err)
+
+            //1. 리스트안에 크리에이터들 아이디 리스트를 담아줌
+            let subscribedUser =[];
+
+            subscriberInfo.map((subscriber, i) => {
+                subscribedUser.push(subscriber.userTo);
+            })
+
+            //2. 찾은 사람들의 비디오를 가지고 온다.
+            //in function :list 를 차례로 돌면서 값을 가져옴
+            Video.find({writer : {$in: subscribedUser}})
+                .populate('writer')
+                .exec((err, videos) => {
+                    if(err) return res.status(400).send(err)
+                    return res.status(200).json({success : true, videos})
+                })
+    })
+
+
+
 })
 
 module.exports = router;
