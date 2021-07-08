@@ -26,6 +26,7 @@ app.use(cookieParser());
 app.use('/api/users', require('./routes/users'));
 app.use('/api/video', require('./routes/video')); //video route로 보낸다.
 app.use('/api/subscribe', require('./routes/subscribe')); //subscribe route로 보낸다.
+app.use('/api/comment', require('./routes/comment')); //comment route로 보낸다.
 
 
 app.use('/uploads', express.static('uploads'));
