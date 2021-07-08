@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import Axios from 'axios';
 import {useSelector} from "react-redux";
 
+import SingleComment from "./SingleComment";
+
 function Comment(props) {
 
     const [commentValue, setCommentValue] = useState("")
@@ -27,6 +29,8 @@ function Comment(props) {
             .then(response => {
                 if(response.data.success) {
                     console.log(response.data.result )
+                    setCommentValue("")
+                    props.refreshFunction(response.data.result)
 
                 } else {
                     alert('코멘트를 저장하지 못했습니다.')
@@ -41,6 +45,12 @@ function Comment(props) {
             <hr />
 
             {/*Comment Lists*/}
+            {props.commentList && props.commentList.map((comment, index) =>
+                (!comment.responseTo &&
+                    <SingleComment refreshFunction={props.refreshFunction} comment={comment} postId={props.postId}/>
+                )
+            )
+            }
 
             {/*Root Comment Form*/}
 
