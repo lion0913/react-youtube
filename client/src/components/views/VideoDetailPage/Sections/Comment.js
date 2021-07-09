@@ -3,6 +3,7 @@ import Axios from 'axios';
 import {useSelector} from "react-redux";
 
 import SingleComment from "./SingleComment";
+import ReplyComment from "./ReplyComment";
 
 function Comment(props) {
 
@@ -45,12 +46,16 @@ function Comment(props) {
             <hr />
 
             {/*Comment Lists*/}
-            {props.commentList && props.commentList.map((comment, index) =>
+            {console.log(props.commentList)}
+
+            {props.commentList && props.commentList.map((comment, index) => (
                 (!comment.responseTo &&
-                    <SingleComment refreshFunction={props.refreshFunction} comment={comment} postId={props.postId}/>
+                    <React.Fragment>
+                        <SingleComment refreshFunction={props.refreshFunction} comment={comment} postId={props.postId}/>
+                        <ReplyComment parentCommentId={comment._id} postId={props.postId} commentList={props.commentList} refreshFunction={props.refreshFunction}/>
+                    </React.Fragment>
                 )
-            )
-            }
+            ))}
 
             {/*Root Comment Form*/}
 
