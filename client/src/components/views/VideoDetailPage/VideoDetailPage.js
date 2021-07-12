@@ -4,6 +4,7 @@ import Axios from 'axios';
 import SideVideo from "./Sections/SideVideo";
 import Subscribe from "./Sections/Subscribe";
 import Comment from "./Sections/Comment";
+import LikeDislikes from "./Sections/LikeDislikes";
 
 function VideoDetailPage(props) {
 
@@ -52,7 +53,7 @@ function VideoDetailPage(props) {
                         <video style={{width:'100%'}} src={`http://localhost:5000/${VideoDetail.filePath}`} controls />
                         <List.Item
                             // subscribe components에 writer의 아이디를 보내주는 방법
-                            actions={[subscribeButton]}>
+                            actions={[<LikeDislikes />, subscribeButton]}>
                             <List.Item.Meta
                                 avatar={<Avatar src={VideoDetail.writer.image} />}
                                 title={VideoDetail.writer.name}
